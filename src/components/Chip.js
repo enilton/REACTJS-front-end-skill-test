@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Chip.css";
+import "../style/Chip";
 
 export default class Chip extends Component {
   handleClick = () => {};
