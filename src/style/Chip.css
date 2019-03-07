@@ -1,28 +1,33 @@
-.chip {
-  padding: 20px 20px 0;
-  margin: 20px 0 20px;
-  border-top: 1px;
-  border-color: solid #da552f;
+.contact {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
 }
-.chip:first-child {
-  margin-top: 0;
-  padding-top: 0;
-  border: 0;
+.contact img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }
-.chip p {
-  margin: 15px 0;
-  font-size: 14px;
-  line-height: 20px;
-}
-.chip button {
-  border: 0;
-  background: transparent;
 
-  display: flex;
-  align-items: center;
-  color: #697882;
+.closebtn {
+  padding-left: 10px;
+  color: #888;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
   cursor: pointer;
 }
-.chip button:hover {
+
+.closebtn:hover {
+  color: #000;
+}
+
+.contact button:hover {
   opacity: 0.7;
 }

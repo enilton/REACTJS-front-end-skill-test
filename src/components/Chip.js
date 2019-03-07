@@ -2,19 +2,37 @@ import React, { Component } from "react";
 import "../style/Chip";
 
 export default class Chip extends Component {
-  handleClick = () => {};
 
-  render() {
+  state = {
+    contact : ''
+  }
+
+  handleClick = () => {
+    let contact = this.state.contact;
+    contact.visible = false;    
+    this.setState({ contact: contact });
+  }
+
+  componentDidMount () {
+    
     const { contact } = this.props;
+    this.setState({ contact: contact });    
+  }
 
-    return (
-      <li className="contact">
-        <strong>{contact.name}</strong>
-        <p>{contact.email}</p>
-        <button type="button" onClick={this.handleClick}>
-          <p>+</p>
-        </button>
-      </li>
+  render() {   
+    let contact = this.state.contact;
+    
+    return (  
+
+          //contact.visible &&
+          <li className="contact">           
+            {
+              contact.img && 
+              <img src={contact.img} /> 
+            }               
+            <strong>{contact.name}</strong>                 
+            <span class="closebtn" onClick={this.handleClick}>&times;</span>                    
+          </li>    
     );
   }
 }
